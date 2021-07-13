@@ -1,0 +1,37 @@
+<div class="dataset-table-container">
+    <div class="table-control-panel">
+        <div class="action-container">
+            <app-button3 [label]="'Search'"></app-button3>
+            <app-button3 [label]="'Add Deployment'" [icon]="'plus'"></app-button3>
+        </div>
+        <app-pagination4 [firstRowNumber]="1" [lastRowNumber]="15" [totalRows]="15"></app-pagination4>
+    </div>
+    <div class="table-content">
+        <div class="table-header row">
+            <app-header-cell5 [label]="'Deployment Name'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Importance'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Service'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Drift'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Accuracy'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Service'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Avg. Prediction/Day'" [sortDirection]="'DESC'"></app-header-cell5>
+            <app-header-cell5 [label]="'Last Prediction'" ></app-header-cell5>
+            <app-header-cell5 [label]="''" ></app-header-cell5>
+        </div>
+        <div class="table-body">
+            <div class="rows">
+                <div class="row" *ngFor="let dataset of datasets">
+                    <app-body-cell6 [label]="dataset.name" [subLabel]="dataset.details"></app-body-cell6>
+                    <app-body-cell7 [importance]="dataset.importance"></app-body-cell7>
+                    <app-body-cell8 [status]="dataset.service"></app-body-cell8>
+                    <app-body-cell8 [status]="dataset.drift"></app-body-cell8>
+                    <app-body-cell8 [status]="dataset.accuracy"></app-body-cell8>
+                    <app-body-cell8 [status]="dataset.service"></app-body-cell8>
+                    <app-body-cell7 [label]="dataset.predictionAvgLabel"></app-body-cell7>
+                    <app-body-cell7  [label]="dataset.lastPrediction"></app-body-cell7>
+                    <app-body-cell9 [icon]="'view_headline'"></app-body-cell9>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

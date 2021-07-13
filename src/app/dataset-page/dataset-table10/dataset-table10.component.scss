@@ -1,0 +1,19 @@
+.dataset-table-container {
+    display: grid;
+    grid-template-rows: min-content auto;
+    .table-control-panel {
+        display: flex;
+        justify-content: space-between;
+        .action-container {
+            display: flex;
+        }
+    }
+    .table-content {
+        display: grid;
+        grid-template-rows: min-content auto;
+        .row {
+            display: grid;
+            grid-template-columns: 20% 10% 10% 10% 10% 10% 10% 10% 10%;
+        }
+    }
+}

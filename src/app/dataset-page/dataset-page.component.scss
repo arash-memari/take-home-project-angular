@@ -1,0 +1,11 @@
+.dataset-page-container {
+    display: grid;
+    grid-template-rows: min-content auto ;
+    .page-header {
+        .header-kpi-container {
+            display: flex;
+
+        }
+    }
+    
+}
