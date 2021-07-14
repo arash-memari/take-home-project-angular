@@ -20,7 +20,7 @@
         </div>
         <div class="table-body">
             <div class="rows">
-                <div class="row" *ngFor="let dataset of datasets">
+                <div class="row" *ngFor="let dataset of datasets, let isEven = even"   [style.backgroundColor]= " isEven ? '#2B2B2B' : '#423F3E' ">
                     <app-body-cell6 [label]="dataset.name" [subLabel]="dataset.details"></app-body-cell6>
                     <app-body-cell7 [importance]="dataset.importance"></app-body-cell7>
                     <app-body-cell8 [status]="dataset.service"></app-body-cell8>

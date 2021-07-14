@@ -1,4 +1,8 @@
 .dataset-page-container {
+  background-color: #171010;
+  margin: 0px;
+  color: grey;
+  font-family: "Arial Narrow", Arial, sans-serif;
     display: grid;
     grid-template-rows: min-content auto ;
     .page-header {
@@ -7,5 +11,5 @@
 
         }
     }
-    
+
 }
