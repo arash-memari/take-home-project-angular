@@ -9,8 +9,9 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderCell5Component implements OnInit {
 
   @Input() label: string;
-  @Input() textAlign: string = "right";
+  @Input() textAlign: string = "left";
   @Input() sortDirection: SortDirection = '';
+  @Input() textColor: boolean ;
   constructor() { }
 
   ngOnInit(): void {

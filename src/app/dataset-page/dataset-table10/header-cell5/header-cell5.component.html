@@ -1,1 +1,9 @@
-<p [style.text-align]="textAlign">{{label}}</p>
+<p [ngStyle]= "{ 'color' :textColor ? 'blue' : 'grey', 'text-align': textAlign }">
+{{ label }}
+</p>
+
+
+
+
+<!-- [style.text-align]="textAlign" -->
+  <!-- [style.color]="textColor ? 'blue' : 'red'" -->

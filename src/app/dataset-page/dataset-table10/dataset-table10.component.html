@@ -1,7 +1,7 @@
 <div class="dataset-table-container">
     <div class="table-control-panel">
         <div class="action-container">
-            <app-button3 [label]="'Search'"></app-button3>
+            <app-button3 [label]="'Search'" [icon]="'search'"></app-button3>
             <app-button3 [label]="'Add Deployment'" [icon]="'plus'"></app-button3>
         </div>
         <app-pagination4 [firstRowNumber]="1" [lastRowNumber]="15" [totalRows]="15"></app-pagination4>
@@ -14,7 +14,7 @@
             <app-header-cell5 [label]="'Drift'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="'Accuracy'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="'Service'" [textAlign]= "'center'" ></app-header-cell5>
-            <app-header-cell5 [label]="'Avg. Prediction/Day'" [sortDirection]="'DESC'" [textAlign]= "'center'" ></app-header-cell5>
+            <app-header-cell5 [label]="'Avg. Prediction/Day'" [sortDirection]="'DESC'" [textAlign]= "'center'" [textColor]="true" ></app-header-cell5>
             <app-header-cell5 [label]="'Last Prediction'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="''" [textAlign]= "'center'" ></app-header-cell5>
         </div>

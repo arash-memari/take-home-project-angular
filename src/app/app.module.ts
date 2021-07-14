@@ -15,6 +15,14 @@ import { BodyCell7Component } from './dataset-page/dataset-table10/body-cell7/bo
 import { BodyCell8Component } from './dataset-page/dataset-table10/body-cell8/body-cell8.component';
 import { BodyCell9Component } from './dataset-page/dataset-table10/body-cell9/body-cell9.component';
 
+import {
+  FaIconLibrary,
+  FontAwesomeModule,
+} from '@fortawesome/angular-fontawesome';
+import { faCoffee, fas } from '@fortawesome/free-solid-svg-icons';
+import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faStar as fasStar } from '@fortawesome/free-solid-svg-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,13 +36,17 @@ import { BodyCell9Component } from './dataset-page/dataset-table10/body-cell9/bo
     BodyCell6Component,
     BodyCell7Component,
     BodyCell8Component,
-    BodyCell9Component
+    BodyCell9Component,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIconPacks(fas);
+    // library.addIcons(faCoffee);
+    // library.addIcons(fasStar, farStar);
+    // library.addI
+  }
+}
