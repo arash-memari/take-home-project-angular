@@ -1,7 +1,7 @@
 <div class="kpi2-container">
   <p>{{ label }}</p>
   <h2>
-    {{ value | number }}
+    {{ value/1000000 | number:'1.2-2' }}M
     <span>({{ valueHint }}%)</span>
   </h2>
 
