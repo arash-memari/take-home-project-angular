@@ -10,20 +10,16 @@ export class Button3Component implements OnInit {
   @Input() label: string;
   @Input() icon: string;
 
-  iconClass= ['fas', 'plus'];
+  iconClass= ['fas'];
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  iconString(): any {
+  iconString(): string[] {
     // debugger
 
-
-    // return `['fas', '${this.icon}']`;
-
-    if (this.icon=== "search")
-      this.iconClass= ['fas', 'search'];
+    this.iconClass[1]= this.icon;
 
     return this.iconClass;
   }

@@ -9,9 +9,40 @@ import { OperationStatus } from '../../dataset-page.data';
 export class BodyCell8Component implements OnInit {
 
   @Input() status: OperationStatus;
-  constructor() { }
 
-  ngOnInit(): void {
+
+
+  iconClass= ['fas'];
+  textColor="yellow";
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  iconString(): string[] {
+
+    // debugger
+
+    switch(this.status) {
+      case 1:
+        this.iconClass[1]="check-circle";
+        this.textColor="#66DE93";
+        break;
+      case 0:
+        this.iconClass[1]="exclamation-circle";
+        this.textColor="#D54C4C";
+        break;
+      default:
+        this.iconClass[1]="question-circle";
+        this.textColor="grey";
+    }
+
+
+    return this.iconClass;
+  }
+
+  setColor(): any{
+    return this.textColor;
   }
 
 }

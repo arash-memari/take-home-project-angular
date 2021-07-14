@@ -12,9 +12,19 @@ export class HeaderCell5Component implements OnInit {
   @Input() textAlign: string = "left";
   @Input() sortDirection: SortDirection = '';
   @Input() textColor: boolean ;
-  constructor() { }
 
-  ngOnInit(): void {
+  iconClass= ['fas'];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  iconString(): string[] {
+    // debugger
+
+    this.iconClass[1]= this.sortDirection;
+
+    return this.iconClass;
   }
 
 }
