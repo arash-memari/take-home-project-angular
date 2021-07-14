@@ -1,7 +1,7 @@
-<span [ngStyle]= "{ 'color' :textColor ? 'blue' : 'grey', 'text-align': textAlign }">
+<p [ngStyle]= "{ 'color' :textColor ? 'blue' : 'grey', 'text-align': textAlign }">
 {{ label }}
-</span>
-<!-- <fa-icon [icon]="iconString()"></fa-icon> -->
+<fa-icon [icon]="iconString()" [ngStyle]= "{'visibility': isVisible()}"></fa-icon>
+</p>
 
 
 

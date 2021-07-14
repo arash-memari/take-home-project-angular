@@ -26,7 +26,7 @@ export class BodyCell8Component implements OnInit {
     switch(this.status) {
       case 1:
         this.iconClass[1]="check-circle";
-        this.textColor="#66DE93";
+        this.textColor="#1EAE98";
         break;
       case 0:
         this.iconClass[1]="exclamation-circle";

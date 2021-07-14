@@ -9,11 +9,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HeaderCell5Component implements OnInit {
 
   @Input() label: string;
-  @Input() textAlign: string = "left";
+  @Input() textAlign: string = "center";
   @Input() sortDirection: SortDirection = '';
   @Input() textColor: boolean ;
 
   iconClass= ['fas'];
+  myVisibility: string;
 
   constructor() {}
 
@@ -22,9 +23,29 @@ export class HeaderCell5Component implements OnInit {
   iconString(): string[] {
     // debugger
 
-    this.iconClass[1]= this.sortDirection;
+
+    switch(this.sortDirection) {
+      case "ASC":
+        this.iconClass[1]="long-arrow-alt-up";
+        this.myVisibility= "visible";
+        break;
+      case "DESC":
+        this.iconClass[1]="long-arrow-alt-down";
+        this.myVisibility= "visible";
+        break;
+      default:
+        this.iconClass[1]="plus";
+        this.myVisibility= "hidden";
+    }
+
+
 
     return this.iconClass;
   }
+
+  isVisible(): string{
+    return this.myVisibility;
+  }
+
 
 }
