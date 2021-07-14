@@ -2,5 +2,15 @@ div {
   background-color: #171010;
   color: #FF7600;
 
-  margin-right: 10px;
+  // margin-right: 10px;
+
+  .btn {
+    background-color: #171010;
+    color: #FF7600;
+
+    background: transparent;
+
+    border-color: #171010;
+    border-style: solid;
+  }
 }

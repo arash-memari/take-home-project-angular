@@ -1,3 +1,5 @@
+
+
 .dataset-page-container {
   background-color: #171010;
   margin: 0px;
@@ -8,6 +10,11 @@
     .page-header {
         .header-kpi-container {
             display: flex;
+
+            app-kpi1, app-kpi2 {
+              width: 24%;
+            }
+
 
         }
     }

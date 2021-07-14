@@ -1,4 +1,15 @@
-button{
+.pagination4-container {
   background-color: #171010;
-  color: grey;
+  color: aliceblue;
+  font-size: 15px;
+
+  .btn {
+    background-color: #171010;
+    color: grey;
+
+    background: transparent;
+
+    border-color: #171010;
+    border-style: solid;
+  }
 }
