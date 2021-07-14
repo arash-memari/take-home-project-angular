@@ -9,17 +9,23 @@ import { faFortAwesome } from '@fortawesome/free-brands-svg-icons';
 export class Button3Component implements OnInit {
   @Input() label: string;
   @Input() icon: string;
+
+  iconClass= ['fas', 'plus'];
+
   constructor() {}
 
   ngOnInit(): void {}
 
-  iconString(): string {
+  iconString(): any {
     // debugger
 
 
     // return `['fas', '${this.icon}']`;
 
-    return "'['fas', 'plus']'";
+    if (this.icon=== "search")
+      this.iconClass= ['fas', 'search'];
+
+    return this.iconClass;
   }
 
 }
