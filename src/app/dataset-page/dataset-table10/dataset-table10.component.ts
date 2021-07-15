@@ -1,4 +1,4 @@
-import { DatasetData } from './../dataset-page.data';
+import { DatasetData, SortDirection } from './../dataset-page.data';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -9,9 +9,34 @@ import { Component, Input, OnInit } from '@angular/core';
 export class DatasetTable10Component implements OnInit {
 
   @Input() datasets: DatasetData[];
-  constructor() { }
+
+  myDirection: SortDirection= "DESC";
+
 
   ngOnInit(): void {
   }
+
+  constructor() {}
+
+  getDirection(): any{
+    debugger
+    return this.myDirection;
+  }
+
+  sortTable(){
+
+    if (this.myDirection=='DESC')   {
+      debugger
+      this.datasets.sort((a, b) => (a.predictionAvg - b.predictionAvg));
+      this.myDirection= "ASC";
+    }
+    else{
+      this.datasets.sort((a, b) => (b.predictionAvg - a.predictionAvg));
+      this.myDirection= "DESC";
+
+    }
+
+  }
+
 
 }

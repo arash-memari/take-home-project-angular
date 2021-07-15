@@ -75,8 +75,8 @@ export const LocalData: DatasetPageData = {
             importance: 'Low',
             service: OperationStatus.Done,
             drift: OperationStatus.Failed,
-            accuracy: OperationStatus.Unknown,
             predictionAvg: 202000,
+            accuracy: OperationStatus.Unknown,
             predictionAvgLabel: '202k',
             lastPrediction: 'a minute ago'
         },

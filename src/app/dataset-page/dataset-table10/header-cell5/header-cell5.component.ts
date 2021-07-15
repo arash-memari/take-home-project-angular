@@ -1,5 +1,5 @@
 import { SortDirection } from './../../dataset-page.data';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header-cell5',
@@ -13,6 +13,8 @@ export class HeaderCell5Component implements OnInit {
   @Input() sortDirection: SortDirection = '';
   @Input() textColor: boolean ;
 
+
+
   iconClass= ['fas'];
   myVisibility: string;
 
@@ -20,8 +22,13 @@ export class HeaderCell5Component implements OnInit {
 
   ngOnInit(): void {}
 
+
   iconString(): string[] {
     // debugger
+
+
+
+
 
 
     switch(this.sortDirection) {
@@ -37,6 +44,7 @@ export class HeaderCell5Component implements OnInit {
         this.iconClass[1]="plus";
         this.myVisibility= "hidden";
     }
+
 
 
 

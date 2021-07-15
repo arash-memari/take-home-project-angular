@@ -6,7 +6,7 @@
         </div>
         <app-pagination4 [firstRowNumber]="1" [lastRowNumber]="15" [totalRows]="15"></app-pagination4>
     </div>
-    <div class="table-content">
+    <div class="table-content" >
 
         <div class="nu-table">
         <div class="table-header row">
@@ -16,7 +16,7 @@
             <app-header-cell5 [label]="'Drift'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="'Accuracy'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="'Service'" [textAlign]= "'center'" ></app-header-cell5>
-            <app-header-cell5 [label]="'Avg. Prediction/Day'" [sortDirection]="'DESC'" [textAlign]= "'center'" [textColor]="true" ></app-header-cell5>
+            <app-header-cell5 [label]="'Avg. Prediction/Day'" [sortDirection]="getDirection()" [textAlign]= "'center'" [textColor]="true" (click) = 'sortTable()'> </app-header-cell5>
             <app-header-cell5 [label]="'Last Prediction'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="''" [textAlign]= "'center'" ></app-header-cell5>
         </div>
