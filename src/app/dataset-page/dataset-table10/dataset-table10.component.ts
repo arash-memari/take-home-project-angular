@@ -18,6 +18,32 @@ export class DatasetTable10Component implements OnInit {
 
   constructor() {}
 
+
+
+  iconClass= ['fas'];
+
+  iconString(): string[] {
+    // debugger
+
+    switch(this.myDirection) {
+      case "ASC":
+        this.iconClass[1]="long-arrow-alt-up";
+
+        break;
+      case "DESC":
+        this.iconClass[1]="long-arrow-alt-down";
+
+        break;
+      default:
+        this.iconClass[1]="plus";
+
+    }
+
+    return this.iconClass;
+  }
+
+
+
   getDirection(): any{
     debugger
     return this.myDirection;

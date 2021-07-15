@@ -27,10 +27,6 @@ export class HeaderCell5Component implements OnInit {
     // debugger
 
 
-
-
-
-
     switch(this.sortDirection) {
       case "ASC":
         this.iconClass[1]="long-arrow-alt-up";
@@ -44,9 +40,6 @@ export class HeaderCell5Component implements OnInit {
         this.iconClass[1]="plus";
         this.myVisibility= "hidden";
     }
-
-
-
 
     return this.iconClass;
   }
