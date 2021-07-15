@@ -1,3 +1,12 @@
 <div class="body-cell7-container">
-  <p>{{ getLabel() }}</p>
+  <p>
+
+    <fa-icon
+      [icon]="iconString()"
+      [ngStyle]="{ visibility: isVisible(), color : isKnown() ? '#39A2DB': 'grey' }"
+
+    ></fa-icon>
+
+    {{ getLabel() }}
+  </p>
 </div>

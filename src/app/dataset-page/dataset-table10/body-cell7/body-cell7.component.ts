@@ -14,9 +14,58 @@ export class BodyCell7Component implements OnInit {
   @Input() label: string;
 
 
-  constructor() { }
+  iconClass= ['fas'];
+  myVisibility: string;
+  iconStatus: boolean=true;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+
+  iconString(): string[] {
+    // debugger
+
+
+    switch(this.importance) {
+      case 'High':
+        this.iconClass[1]="align-justify";
+        this.myVisibility= "visible";
+        this.iconStatus= true;
+        break;
+      case 'Medium':
+        this.iconClass[1]="grip-lines";
+        this.myVisibility= "visible";
+        this.iconStatus= true;
+        break;
+      case 'Low':
+        this.iconClass[1]="minus";
+        this.myVisibility= "visible";
+        this.iconStatus= true;
+        break;
+      case 'Low':
+        this.iconClass[1]="question-circle";
+        this.myVisibility= "visible";
+        this.iconStatus= false;
+        break;
+      default:
+        this.iconClass[1]="plus";
+        this.myVisibility= "hidden";
+        this.iconStatus= false;
+    }
+
+
+
+
+    return this.iconClass;
+  }
+
+  isKnown():boolean{
+    return this.iconStatus;
+  }
+
+  isVisible(): string{
+    return this.myVisibility;
   }
 
   getLabel(): any{
