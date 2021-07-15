@@ -7,6 +7,8 @@
         <app-pagination4 [firstRowNumber]="1" [lastRowNumber]="15" [totalRows]="15"></app-pagination4>
     </div>
     <div class="table-content">
+
+        <div class="nu-table">
         <div class="table-header row">
             <app-header-cell5 [label]="'Deployment Name'"  [textAlign]= "'left'"></app-header-cell5>
             <app-header-cell5 [label]="'Importance'" [textAlign]= "'center'" ></app-header-cell5>
@@ -18,6 +20,9 @@
             <app-header-cell5 [label]="'Last Prediction'" [textAlign]= "'center'" ></app-header-cell5>
             <app-header-cell5 [label]="''" [textAlign]= "'center'" ></app-header-cell5>
         </div>
+      </div>
+
+        <div class="nu-table-body">
         <div class="table-body">
             <div class="rows">
                 <div class="row" *ngFor="let dataset of datasets, let isEven = even"   [style.backgroundColor]= " isEven ? '#2B2B2B' : '#423F3E' ">
@@ -33,5 +38,6 @@
                 </div>
             </div>
         </div>
+      </div>
     </div>
 </div>
