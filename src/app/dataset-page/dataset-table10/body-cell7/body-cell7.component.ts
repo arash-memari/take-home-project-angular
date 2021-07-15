@@ -43,11 +43,11 @@ export class BodyCell7Component implements OnInit {
         this.myVisibility= "visible";
         this.iconStatus= true;
         break;
-      case 'Low':
-        this.iconClass[1]="question-circle";
-        this.myVisibility= "visible";
-        this.iconStatus= false;
-        break;
+      // case "":
+      //   this.iconClass[1]="question-circle";
+      //   this.myVisibility= "visible";
+      //   this.iconStatus= false;
+      //   break;
       default:
         this.iconClass[1]="plus";
         this.myVisibility= "hidden";
